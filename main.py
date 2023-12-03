@@ -18,7 +18,7 @@ class doku(BaseModel):
 import os
 
 # 保存したディレクトリとファイル名
-save_directory = 'C:\\Users\\tomit\\code\\毒キノコアプリ2'
+save_directory = 'C:\\Users\\tomit\\code\\毒キノコアプリ3'
 model_filename = 'model_毒.pkl'
 
 # モデルの読み込み

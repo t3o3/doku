@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 # データセット読み込み
 import pandas as pd
-df = pd.read_table("C:\\Users\\tomit\\code\\毒キノコアプリ2\\train.tsv")
+df = pd.read_table("C:\\Users\\tomit\\code\\毒キノコアプリ3\\train.tsv")
 
 #　いらない特定のカラムを削除
 df = df.drop(['id','cap-shape','cap-surface','cap-color','gill-attachment','stalk-shape','stalk-surface-below-ring','stalk-color-above-ring','stalk-color-below-ring','veil-type','veil-color','ring-number','habitat','gill-spacing','stalk-root','ring-type','bruises'], axis=1)
