@@ -63,7 +63,7 @@ doku = {
 if st.button("予測開始"):
 
     # 予測の実行
-    response = requests.post("https://6cq2s8grsg7hgb9myjfgyc.streamlit.app/predict", json=doku)
+    response = requests.post("http://127.0.0.1:8000/predict", json=doku)
     prediction = response.json()["prediction"]
 
     # 予測結果の表示
