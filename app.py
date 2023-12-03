@@ -63,7 +63,7 @@ doku = {
 if st.button("予測開始"):
 
     # 予測の実行
-    response = requests.post("http://127.0.0.1:8000/predict", json=doku)
+    response = requests.post("https://doku-main.onrender.com/predict", json=doku)
     prediction = response.json()["prediction"]
 
     # 予測結果の表示
