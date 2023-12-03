@@ -18,11 +18,23 @@ class doku(BaseModel):
 import os
 
 # 保存したディレクトリとファイル名
-save_directory = 'C:\\Users\\tomit\\code\\毒キノコアプリ3'
+#save_directory = 'C:\\Users\\tomit\\code\\毒キノコアプリ3'
+#model_filename = 'model_毒.pkl'
+
+# モデルの読み込み
+#model_path = os.path.join(save_directory, model_filename)
+#model = pickle.load(open(model_path, 'rb'))
+
+# 実行中のスクリプトのディレクトリを取得
+current_directory = os.path.dirname(os.path.realpath(__file__))
+
+# 保存したディレクトリとファイル名
+save_directory = os.path.join(current_directory)
 model_filename = 'model_毒.pkl'
 
 # モデルの読み込み
 model_path = os.path.join(save_directory, model_filename)
+print("Model Path:", model_path)
 model = pickle.load(open(model_path, 'rb'))
 
 # トップページ
