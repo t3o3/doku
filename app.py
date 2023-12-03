@@ -63,7 +63,7 @@ doku = {
 if st.button("予測開始"):
 
     # 予測の実行
-    response = requests.post("http://localhost:8000/predict", json=doku)
+    response = requests.post("https://6cq2s8grsg7hgb9myjfgyc.streamlit.app/predict", json=doku)
     prediction = response.json()["prediction"]
 
     # 予測結果の表示
@@ -71,7 +71,7 @@ if st.button("予測開始"):
     st.write('## 毒判定')
 
     targets = ['毒', '毒じゃない']
-    st.write('# たぶん',str(targets[int(prediction)]),'っす!')
+    st.write('# たぶん',str(targets[int(prediction)]),'deathよ!')
 
     # 予測が0の場合
     if prediction == "0":
