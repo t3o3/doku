@@ -1,0 +1,42 @@
+# サイドバーにスライダーを追加
+slider_value = st.sidebar.slider('数値を選択してください', min_value=0, max_value=100, value=50)
+
+# サイドバーに選択ボックスを追加
+options = ['アーモンド', 'クレオソート', 'ファウル','アニス','ミューズイ','なし','辛味','スパイシー','フィッシュ']
+selected_option = st.sidebar.selectbox('項目を選択してください', options)
+
+# 他の入力項目も同様に追加できます
+# 例えば、テキスト入力
+text_input = st.sidebar.text_input('テキストを入力してください', 'デフォルトの値')
+
+# ボタンを追加することもできます
+if st.sidebar.button('分類開始'):
+    # 分類のロジックをここに追加
+    st.write(f'選択された数値: {slider_value}')
+    st.write(f'選択された項目: {selected_option}')
+    st.write(f'入力されたテキスト: {text_input}')
+
+
+
+
+
+Y Label Mapping:
+{'e': 0, 'p': 1}
+
+odor Label Mapping:
+{'a': 0, 'c': 1, 'f': 2, 'l': 3, 'm': 4, 'n': 5, 'p': 6, 's': 7, 'y': 8}
+
+gill-size Label Mapping:
+{'b': 0, 'n': 1}
+
+gill-color Label Mapping:
+{'b': 0, 'e': 1, 'g': 2, 'h': 3, 'k': 4, 'n': 5, 'o': 6, 'p': 7, 'r': 8, 'u': 9, 'w': 10, 'y': 11}
+
+stalk-surface-above-ring Label Mapping:
+{'f': 0, 'k': 1, 's': 2, 'y': 3}
+
+spore-print-color Label Mapping:
+{'b': 0, 'h': 1, 'k': 2, 'n': 3, 'o': 4, 'r': 5, 'u': 6, 'w': 7, 'y': 8}
+
+population Label Mapping:
+{'a': 0, 'c': 1, 'n': 2, 's': 3, 'v': 4, 'y': 5}
